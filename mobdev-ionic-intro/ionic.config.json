@@ -1,7 +1,5 @@
 {
   "name": "mobdev-ionic-intro",
-  "integrations": {
-    "capacitor": {}
-  },
+  "integrations": {},
   "type": "angular"
 }
