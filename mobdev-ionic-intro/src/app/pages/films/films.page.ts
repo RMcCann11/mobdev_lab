@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+// import { HttpClient } from '@angular/common/http';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-films',
@@ -11,12 +12,16 @@ import { HttpClient } from '@angular/common/http';
 })
 export class FilmsPage implements OnInit {
 
-  constructor(private navController: NavController, private router: Router, private http: HttpClient) { }
+  // constructor(private navController: NavController, private router: Router, private http: HttpClient) { }
+  constructor(private navController: NavController, private router: Router, private api : ApiService) { }
 
   films: Observable<any>;
   
   ngOnInit() {
-    this.films = this.http.get('https://swapi.dev/api/films');
+
+    this.films = this.api.getFilms();
+
+    // this.films = this.http.get('https://swapi.dev/api/films');
     // this.films.subscribe((data) => {
     // console.log('my data: ', data);
     // });
