@@ -44,4 +44,11 @@ export class FilmsPage implements OnInit {
     this.router.navigateByUrl(`/tabs/films/${filmId}`);
     }
 
+  displayFilmDetails(film){
+    console.log(film);
+    let split = film.url.split('/');
+    let filmId = split[split.length-2];
+    this.router.navigateByUrl(`/tabs/films/${filmId}`);
+  }
+
 }

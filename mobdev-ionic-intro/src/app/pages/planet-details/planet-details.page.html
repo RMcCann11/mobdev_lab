@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="/tabs/planets"></ion-back-button>
+    </ion-buttons>
+    <!-- <ion-title>Details</ion-title> -->
+    <ion-title>{{ planet?.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- <ion-content class="ion-padding"> -->
+  <ion-content>
+    <ion-card *ngIf="planet">
+      <ion-card-content>
+      Population: {{ planet.population }}
+      </ion-card-content>
+      <ion-card-content>
+      Diameter: {{ planet.diameter }}
+      </ion-card-content>
+      <ion-card-content>
+      Terrain: {{ planet.terrain }}
+      </ion-card-content>
+      <ion-card-content>
+      Climate: {{ planet.climate }}
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
