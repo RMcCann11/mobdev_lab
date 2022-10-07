@@ -13,7 +13,7 @@ import { ApiService } from 'src/app/services/api.service';
 export class FilmsPage implements OnInit {
 
   // constructor(private navController: NavController, private router: Router, private http: HttpClient) { }
-  constructor(private navController: NavController, private router: Router, private api : ApiService) { }
+   constructor(private navController: NavController, private router: Router, private api : ApiService) { }
 
   films: Observable<any>;
   
